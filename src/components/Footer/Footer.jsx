@@ -19,14 +19,18 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <NavLink to="/" className={({isActive})=>
+                                       ` hover:underline ${isActive? " text-orange-700":""}`
+                                    }>
                                         Home
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="hover:underline">
-                                        About
-                                    </Link>
+                                <NavLink to="/about" className={({isActive})=>
+                                       ` hover:underline ${isActive? " text-orange-700":""}`
+                                    }>
+                                       About
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -35,7 +39,7 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/Akshat-iitk"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
@@ -68,15 +72,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center">
-                        © 2023
-                        <a href="https://hiteshchoudhary.com/" className="hover:underline">
-                            hiteshchoudhary
-                        </a>
-                        . All Rights Reserved.
-                    </span>
-                    <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                <div className="flex item-center justify-between sm:flex sm:items-center sm:justify-between">
+                  
+                    <div className="flex justify-center mt-4 space-x-5 sm:justify-center sm:mt-0">
                         <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
@@ -91,9 +89,9 @@ export default function Footer() {
                                     clip-rule="evenodd"
                                 />
                             </svg>
-                            <span className="sr-only">Facebook page</span>
+                            <span className="sr-only  hover:text-gray-900">Facebook page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="text-gray-500  hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
